@@ -6,4 +6,4 @@
 
 Forked from [CareyWang/MyUrls](https://github.com/CareyWang/MyUrls)
 
-Github [https://github.com/cjpjxjx/MyUrls](https://github.com/cjpjxjx/van-nav)+
+Github [https://github.com/cjpjxjx/MyUrls](https://github.com/cjpjxjx/van-nav)
