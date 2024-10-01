@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyUrls</title>
-
-  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
-  <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
-  <script src="https://unpkg.com/axios@0.19.2/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/element-ui@2.13.0/lib/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue-clipboard2@0.3.1/dist/vue-clipboard.min.js"></script>
+  <link rel="shortcut icon" href="https://d.cencs.com/static/url/favicon.ico">
+  <title>CENCS URL</title>
+  <link rel="stylesheet" href="https://d.cencs.com/static/url/style/index.css">
+  <script src="https://d.cencs.com/static/url/style/vue.min.js"></script>
+  <script src="https://d.cencs.com/static/url/style/axios.min.js"></script>
+  <script src="https://d.cencs.com/static/url/style/index.js"></script>
+  <script src="https://d.cencs.com/static/url/style/vue-clipboard.min.js"></script>
 </head>
 
 <body>
@@ -19,13 +19,13 @@
       <el-header></el-header>
       <el-main>
         <div :class="[isPc ? 'body-center body-width-pc' : 'body-center body-width-mb']">
-          <img width="300" src="/logo.png" @click="goToGayHub">
-          <el-input ref="long" v-model="longUrl" size="medium" @keyup.enter.native="enterToDoShort">
-            <el-button slot="append" icon="el-icon-magic-stick" @click="doShort" :loading="loading"></el-button>
+          <h1 class="logo-title" @click="goToGayHub">CENCS URL</h1>
+          <el-input ref="long" v-model="longUrl" placeholder="输入需要转换的长链接" size="medium" @keyup.enter.native="enterToDoShort">
+            <el-button slot="append" icon="el-icon-magic-stick" @click="doShort" :loading="loading">转换</el-button>
           </el-input>
-          <el-input ref="shortUrl" @dblclick.native="changeDisableStatus" class="copy-content" v-model="shortUrl" size="medium">
+          <el-input ref="shortUrl" @dblclick.native="changeDisableStatus" class="copy-content" v-model="shortUrl" placeholder="点击转换后获取短链接" size="medium">
             <el-button slot="append" v-clipboard:copy="shortUrl" v-clipboard:success="onCopy" ref="copy-btn"
-              icon="el-icon-document-copy"></el-button>
+              icon="el-icon-document-copy">复制</el-button>
           </el-input>
         </div>
       </el-main>
@@ -147,6 +147,12 @@
 
     .el-input {
       margin-top: 20px;
+    }
+
+    .logo-title {
+      font-size: 2.5em;
+      margin: 0;
+      cursor: pointer;
     }
   </style>
 </body>
