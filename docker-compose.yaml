@@ -1,7 +1,7 @@
 services:
   myurls:
     build: .
-    image: cjpjxjx/myurls:latest
+    image: cjpjxjx/MyUrls:latest
     container_name: myurls
     restart: unless-stopped
     ports:
